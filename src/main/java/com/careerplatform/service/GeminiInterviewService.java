@@ -13,7 +13,7 @@ import java.util.Map;
 @Service
 public class GeminiInterviewService {
 
-    @Value("${gemini.api-key}")
+    @Value("${gemini.api-key:}")
     private String apiKey;
 
     @Value("${gemini.model:gemini-2.5-flash}")
@@ -32,6 +32,10 @@ public class GeminiInterviewService {
             String skills,
             String experienceLevel,
             String interviewType) {
+
+        if (apiKey == null || apiKey.isBlank()) {
+            throw new IllegalStateException("Gemini API key is not configured. Please set the GEMINI_API_KEY environment variable.");
+        }
 
         if (role == null || role.isBlank()) {
             throw new IllegalArgumentException("Job role is required.");

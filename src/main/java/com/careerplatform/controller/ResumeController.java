@@ -17,7 +17,7 @@ import com.careerplatform.service.JobRecommendationService;
 
 @RestController
 @RequestMapping("/api/resume")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "${app.cors.allowed-origins:http://localhost:5173,http://localhost:5174}")
 public class ResumeController {
 
     private final SkillExtractionService skillExtractionService;

@@ -1,0 +1,12 @@
+**/.git
+**/.gitignore
+**/.gitattributes
+**/target/
+**/.settings/
+**/.project
+**/.classpath
+**/HELP.md
+**/*.log
+**/.mvn/
+mvnw
+mvnw.cmd

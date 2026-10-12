@@ -11,7 +11,7 @@ import com.careerplatform.service.JobApplicationService;
 
 @RestController
 @RequestMapping("/api/applications")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "${app.cors.allowed-origins:http://localhost:5173,http://localhost:5174}")
 public class JobApplicationController {
 
     private final JobApplicationService applicationService;

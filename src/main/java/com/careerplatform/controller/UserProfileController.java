@@ -10,7 +10,7 @@ import com.careerplatform.service.UserProfileService;
 
 @RestController
 @RequestMapping("/api/profiles")
-@CrossOrigin(origins = "http://localhost:5174")
+@CrossOrigin(origins = "${app.cors.allowed-origins:http://localhost:5173,http://localhost:5174}")
 public class UserProfileController {
 
     private final UserProfileService profileService;

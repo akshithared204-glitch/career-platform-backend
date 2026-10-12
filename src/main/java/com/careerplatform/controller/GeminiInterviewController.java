@@ -16,10 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/ai/interview")
-@CrossOrigin(origins = {
-        "http://localhost:5173",
-        "http://localhost:5174"
-})
+@CrossOrigin(origins = "${app.cors.allowed-origins:http://localhost:5173,http://localhost:5174}")
 public class GeminiInterviewController {
 
     private final GeminiInterviewService interviewService;
